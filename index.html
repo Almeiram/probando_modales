@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="shortcut icon" href="/public/cumpleanos.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modales</title>
+  </head>
+  <body>
+    <!-- Botones que abren el modal con diferentes contenidos -->
+<button class="openModal" 
+        data-title="Eliminar registro" 
+        data-content="¿Estás seguro de que quieres eliminar este registro?" 
+        data-type="confirm">
+  Eliminar
+</button>
+
+<button class="openModal" 
+        data-title="Información del sistema" 
+        data-content="Este es un mensaje informativo con ícono." 
+        data-type="info">
+  Ver Info
+</button>
+
+<button class="openModal" 
+        data-title="Formulario de contacto" 
+        data-content='<form id="contactForm">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <input type="email" placeholder="Tu correo" required>
+                        <button type="submit">Enviar</button>
+                      </form>' 
+        data-type="form">
+  Abrir Formulario
+</button>
+
+<!-- Modal genérico -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+    <div id="modalFooter"></div>
+  </div>
+</div>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
